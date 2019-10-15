@@ -6,6 +6,10 @@
 #include "navswitch.h"
 #include "button.h"
 #include "../drivers/led.h"
+#include "character_choice.h"
+#include "check_winner.h"
+#include "displayResults.h"
+#include "ircharsend.h"
 
 #define MESSAGE_RATE 10
 #define PACER_RATE 500
@@ -33,6 +37,7 @@ int main (void)
     int rivalRecieved = 0;
     int gameOver = 0; /*Game Over check*/
     int gameStatus = 0; /*Game status Check*/
+    led_set(LED1, 0);
 
 
 
@@ -41,7 +46,7 @@ int main (void)
         navswitch_update ();
         tinygl_update ();
 
-        if (gameWon == 0) {
+        if (gameOver == 0) {
             localCharacter = character_choice(localCharacter);
 
             if (localSent == 0) {

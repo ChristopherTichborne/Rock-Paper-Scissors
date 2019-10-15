@@ -1,5 +1,5 @@
 /*
-    Module to send choice selected to other board via IR
+    Module to send choice selected to other board via IR & to recieve
 */
 
 #include "system.h"
@@ -13,4 +13,17 @@ int send_character(char choice)
         return 1;
     }
     return 0;
+}
+
+char recieve_character(void)
+{
+    char recievedChar = '_';
+
+    while (recievedChar != 'R' || recievedChar != 'P' || recievedChar != 'S') {
+        if (ir_uart_read_ready_p ()) {
+            recievedChar = ir_uart_getc ();
+        }
+    }
+
+    return recievedChar;
 }

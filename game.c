@@ -60,7 +60,7 @@ int main (void)
 
         if (gameOver == 0) {
             display_local(localCharacter);
-        } else if (gameOver == 1) {
+        } else if (gameOver == 1) { gggg
 
 
 

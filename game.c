@@ -42,12 +42,13 @@ int main (void)
         tinygl_update ();
 
         if (gameWon == 0) {
-            localCharacter = character_choice();
+            localCharacter = character_choice(localCharacter);
 
             if (localSent == 0) {
-                send_character(localCharacter);
-                led_set(LED1, 1);
-                localSent = 1;
+                localSent = send_character(localCharacter);
+                if (localSent == 1) {
+                    led_set(LED1, 1);
+                }
             }
 
             if (rivalRecieved == 0) {

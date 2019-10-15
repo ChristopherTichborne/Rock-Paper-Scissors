@@ -24,6 +24,13 @@ int main (void)
 
     pacer_init (PACER_RATE);
 
+    /* Initialises all useful constants, comparison variables and strings*/
+    char localCharacter = '_';
+    char rivalCharacter = '_';
+    int localSent = 0;
+    int rivalRecieved = 0;
+    int gameOver = 0; /*Game Over check*/
+    int gameStatus = 0; /*Game status Check*/
 
 
 
@@ -31,6 +38,31 @@ int main (void)
         pacer_wait ();
         navswitch_update ();
         tinygl_update ();
+
+        if (gameWon == 0) {
+            localCharacter = character_choice();
+
+            if (localSent == 0) {
+                send_character(localCharacter);
+                localSent = 1;
+            }
+
+            if (rivalRecieved == 0) {
+                recieve_character();
+                rivalCharacter = 1;
+            }
+
+            if (localSent == 1 && rivalCharacter == 1) {
+                gameStatus = check_winner(localCharacter, rivalCharacter);
+                gameOver = 1;
+            }
+        }
+
+        if (gameOver == 0) {
+            display_local(localCharacter);
+        } else if (gameOver == 1) {
+
+
 
     }
 }

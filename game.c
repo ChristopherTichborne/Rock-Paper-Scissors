@@ -5,6 +5,7 @@
 #include "tinygl.h"
 #include "navswitch.h"
 #include "button.h"
+#include "../drivers/led.h"
 
 #define MESSAGE_RATE 10
 #define PACER_RATE 500
@@ -17,6 +18,7 @@ int main (void)
     button_init ();
     navswitch_init ();
     ir_uart_init ();
+    led_init ();
 
     tinygl_init (PACER_RATE);
     tinygl_font_set (&font5x7_1);
@@ -44,6 +46,7 @@ int main (void)
 
             if (localSent == 0) {
                 send_character(localCharacter);
+                led_set(LED1, 1);
                 localSent = 1;
             }
 
@@ -54,15 +57,26 @@ int main (void)
 
             if (localSent == 1 && rivalCharacter == 1) {
                 gameStatus = check_winner(localCharacter, rivalCharacter);
+                led_set(LED1, 0);
                 gameOver = 1;
             }
         }
 
         if (gameOver == 0) {
             display_local(localCharacter);
-        } else if (gameOver == 1) { gggg
+        } else if (gameOver == 1) {
+            display_win_status(gameStatus);
+        }
 
-
+        if (button_pressed_p()) {
+            char localCharacter = '_';
+            char rivalCharacter = '_';
+            int localSent = 0;
+            int rivalRecieved = 0;
+            int gameOver = 0;
+            int gameStatus = 0;
+            led_set(LED1, 0);
+        }
 
     }
 }

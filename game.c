@@ -51,8 +51,8 @@ int main (void)
             }
 
             if (rivalRecieved == 0) {
-                recieve_character();
-                rivalCharacter = 1;
+                rivalCharacter = recieve_character();
+                rivalRecieved = 1;
             }
 
             if (localSent == 1 && rivalCharacter == 1) {

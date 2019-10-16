@@ -1,3 +1,11 @@
+/*
+ * ircharsend.h
+ * Nic page, Chris Tichborne
+ * 16 October 2019
+ * Header file for ircharsend.c
+*/
+
+
 #ifndef IRCHARSEND_H
 #define IRCHARSEND_H
 

@@ -6,6 +6,7 @@
 
 int check_winner(char localCharacter, char rivalCharacter)
 {
+    int gameStatus = 0;
 
     if(localCharacter != '_' || rivalCharacter != '_') {
         if(localCharacter == 'R' && rivalCharacter == 'S' ) {      // local selected rock and rival selected scissor

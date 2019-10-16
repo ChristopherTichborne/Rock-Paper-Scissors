@@ -42,7 +42,6 @@ int main (void)
     int gameStatus = 0; /*Game status Check*/
     led_set(LED1, 0);
     int gameStart = 1;
-    int thingy = 0;
 
     while (gameStart == 1) {
         pacer_wait();
@@ -62,8 +61,6 @@ int main (void)
             gameStart = 0;
         } else {
             tinygl_text_mode_set (TINYGL_TEXT_MODE_SCROLL);
-
-
         }
     }
 
@@ -97,22 +94,21 @@ int main (void)
 
             }
         }
-    }
 
-    if (gameOver == 0) {
-        display_local(localCharacter);
-    } else if (gameOver == 1) {
-        display_win_status(gameStatus);
-    }
+        if (gameOver == 0) {
+            display_local(localCharacter);
+        } else if (gameOver == 1) {
+            display_win_status(gameStatus);
+        }
 
-    if (button_pressed_p()) {
-        localCharacter = '_';
-        rivalCharacter = '_';
-        localSent = 0;
-        rivalRecieved = 0;
-        gameOver = 0;
-        gameStatus = 0;
-        led_set(LED1, 0);
+        if (button_pressed_p()) {
+            localCharacter = '_';
+            rivalCharacter = '_';
+            localSent = 0;
+            rivalRecieved = 0;
+            gameOver = 0;
+            gameStatus = 0;
+            led_set(LED1, 0);
+        }
     }
-}
 }

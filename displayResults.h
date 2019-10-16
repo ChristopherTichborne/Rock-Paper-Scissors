@@ -1,6 +1,10 @@
-/** Header file for displayResults.h
- * This header defines two functions used for displaying results
+/*
+ * displayResults.h
+ * Nic page, Chris Tichborne
+ * 16 October 2019
+ * Header file for displayResults.c
 */
+
 
 #ifndef DISPLAYRESULTS_H
 #define DISPLAYRESULTS_H

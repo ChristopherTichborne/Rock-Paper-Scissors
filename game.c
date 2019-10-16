@@ -85,35 +85,34 @@ int main (void)
 
             if (rivalRecieved == 0) {
                 rivalCharacter = recieve_character();
-                rivalRecieved = 1;
-            }
-
-            if (localSent == 1 && rivalCharacter == 1) {
-                if (thingy == 0) {
-                    display_local(rivalCharacter);
-                } else {
-                    gameStatus = check_winner(localCharacter, rivalCharacter);
-                    led_set(LED1, 0);
-                    gameOver = 1;
-
+                if (rivalCharacter == 'R' || rivalCharacter == 'P' || rivalCharacter == 'S') {
+                    rivalRecieved = 1;
                 }
             }
-        }
 
-        if (gameOver == 0) {
-            display_local(localCharacter);
-        } else if (gameOver == 1) {
-            display_win_status(gameStatus);
-        }
+            if (localSent == 1 && rivalRecieved == 1) {
+                gameStatus = check_winner(localCharacter, rivalCharacter);
+                led_set(LED1, 0);
+                gameOver = 1;
 
-        if (button_pressed_p()) {
-            localCharacter = '_';
-            rivalCharacter = '_';
-            localSent = 0;
-            rivalRecieved = 0;
-            gameOver = 0;
-            gameStatus = 0;
-            led_set(LED1, 0);
+            }
         }
     }
+
+    if (gameOver == 0) {
+        display_local(localCharacter);
+    } else if (gameOver == 1) {
+        display_win_status(gameStatus);
+    }
+
+    if (button_pressed_p()) {
+        localCharacter = '_';
+        rivalCharacter = '_';
+        localSent = 0;
+        rivalRecieved = 0;
+        gameOver = 0;
+        gameStatus = 0;
+        led_set(LED1, 0);
+    }
+}
 }

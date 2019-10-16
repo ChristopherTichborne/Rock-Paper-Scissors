@@ -11,7 +11,7 @@
 #include "displayResults.h"
 #include "ircharsend.h"
 
-#define MESSAGE_RATE 10
+#define MESSAGE_RATE 20
 #define PACER_RATE 500
 
 
@@ -34,8 +34,8 @@ int main (void)
     pacer_init (PACER_RATE);
 
     /* Initialises all useful constants, comparison variables and strings*/
-    char localCharacter = '_';
-    char rivalCharacter = '_';
+    char localCharacter = '-';
+    char rivalCharacter = '-';
     int localSent = 0;
     int rivalRecieved = 0;
     int gameOver = 0; /*Game Over check*/
@@ -102,8 +102,8 @@ int main (void)
         }
 
         if (button_pressed_p()) {
-            localCharacter = '_';
-            rivalCharacter = '_';
+            localCharacter = '-';
+            rivalCharacter = '-';
             localSent = 0;
             rivalRecieved = 0;
             gameOver = 0;

@@ -27,6 +27,9 @@ int main (void)
     tinygl_init (PACER_RATE);
     tinygl_font_set (&font5x7_1);
     tinygl_text_speed_set (MESSAGE_RATE);
+    tinygl_text_mode_set (TINYGL_TEXT_MODE_SCROLL);
+    tinygl_text_dir_set (TINYGL_TEXT_DIR_NORMAL);
+    tinygl_text ("ROCK PAPER SCISSORS ");
 
     pacer_init (PACER_RATE);
 
@@ -38,9 +41,31 @@ int main (void)
     int gameOver = 0; /*Game Over check*/
     int gameStatus = 0; /*Game status Check*/
     led_set(LED1, 0);
-
+    int gameStart = 1;
     int thingy = 0;
 
+    while (gameStart == 1) {
+        pacer_wait();
+        tinygl_update ();
+        navswitch_update ();
+
+        if (navswitch_push_event_p (NAVSWITCH_EAST)) {
+            gameStart = 0;
+        }
+        if (navswitch_push_event_p (NAVSWITCH_WEST)) {
+            gameStart = 0;
+        }
+        if (navswitch_push_event_p (NAVSWITCH_NORTH)) {
+            gameStart = 0;
+        }
+        if (navswitch_push_event_p (NAVSWITCH_SOUTH)) {
+            gameStart = 0;
+        } else {
+            tinygl_text_mode_set (TINYGL_TEXT_MODE_SCROLL);
+
+
+        }
+    }
 
 
 

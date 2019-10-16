@@ -13,12 +13,12 @@ char character_choice(char choice)
         choice = 'R';
     }
 
-    if (navswitch_push_event_p(NAVSWITCH_North))   // North/Up for paper selection
+    if (navswitch_push_event_p(NAVSWITCH_NORTH))   // North/Up for paper selection
     {
         choice = 'P';
     }
 
-    if (navswitch_push_event_p(NAVSWITCH_West))    // West/Left for scissor selection
+    if (navswitch_push_event_p(NAVSWITCH_WEST))    // West/Left for scissor selection
     {
         choice = 'S';
     }

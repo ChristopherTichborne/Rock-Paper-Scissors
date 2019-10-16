@@ -1,11 +1,15 @@
 /*
-    Module to send choice selected to other board via IR & to recieve
+ * ircharsend.c
+ * Nic page, Chris Tichborne
+ * 16 October 2019
+ * Module that handles IR communications
 */
 
 #include "system.h"
 #include "ir_uart.h"
 #include "navswitch.h"
 
+/* Function for sending characters*/
 int send_character(char choice)
 {
     if (((choice == 'P' || choice == 'S' || choice == 'R') && ir_uart_write_ready_p()
@@ -13,9 +17,11 @@ int send_character(char choice)
         ir_uart_putc(choice);
         return 1;
     }
+
     return 0;
 }
 
+/* Fucntion for recieving characters*/
 char recieve_character(void)
 {
     char recievedChar = '-';

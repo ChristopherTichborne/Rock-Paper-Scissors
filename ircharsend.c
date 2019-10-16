@@ -18,7 +18,7 @@ int send_character(char choice)
 
 char recieve_character(void)
 {
-    char recievedChar = '_';
+    char recievedChar = '-';
 
     if (recievedChar != 'R' || recievedChar != 'P' || recievedChar != 'S') {
         if (ir_uart_read_ready_p ()) {

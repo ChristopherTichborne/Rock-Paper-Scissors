@@ -39,6 +39,9 @@ int main (void)
     int gameStatus = 0; /*Game status Check*/
     led_set(LED1, 0);
 
+    int thingy = 0;
+
+
 
 
     while (1) {
@@ -47,9 +50,8 @@ int main (void)
         tinygl_update ();
 
         if (gameOver == 0) {
-            localCharacter = character_choice(localCharacter);
-
             if (localSent == 0) {
+                localCharacter = character_choice(localCharacter);
                 localSent = send_character(localCharacter);
                 if (localSent == 1) {
                     led_set(LED1, 1);
@@ -62,9 +64,14 @@ int main (void)
             }
 
             if (localSent == 1 && rivalCharacter == 1) {
-                gameStatus = check_winner(localCharacter, rivalCharacter);
-                led_set(LED1, 0);
-                gameOver = 1;
+                if (thingy == 0) {
+                    display_local(rivalCharacter);
+                } else {
+                    gameStatus = check_winner(localCharacter, rivalCharacter);
+                    led_set(LED1, 0);
+                    gameOver = 1;
+
+                }
             }
         }
 
@@ -75,14 +82,13 @@ int main (void)
         }
 
         if (button_pressed_p()) {
-            char localCharacter = '_';
-            char rivalCharacter = '_';
-            int localSent = 0;
-            int rivalRecieved = 0;
-            int gameOver = 0;
-            int gameStatus = 0;
+            localCharacter = '_';
+            rivalCharacter = '_';
+            localSent = 0;
+            rivalRecieved = 0;
+            gameOver = 0;
+            gameStatus = 0;
             led_set(LED1, 0);
         }
-
     }
 }

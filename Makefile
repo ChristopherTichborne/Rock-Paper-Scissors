@@ -1,7 +1,7 @@
 # File:   Makefile
-# Author: M. P. Hayes, UCECE
-# Date:   12 Sep 2010
-# Descr:  Makefile for game
+# Author: Nic Page, Chris Tichborne
+# Date:   16 October 2019
+# Descr:  Makefile for game.c, which is a Rock Paper Scissors game
 
 # Definitions.
 CC = avr-gcc

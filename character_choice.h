@@ -5,7 +5,6 @@
  * Header file for character_choice.c
 */
 
-
 #ifndef CHARACTER_CHOICE_H
 #define CHARACTER_CHOICE_H
 

@@ -5,7 +5,6 @@
  * Header file for ircharsend.c
 */
 
-
 #ifndef IRCHARSEND_H
 #define IRCHARSEND_H
 

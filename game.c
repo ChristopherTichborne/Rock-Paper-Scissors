@@ -26,7 +26,6 @@
 #define MESSAGE_RATE 20
 #define PACER_RATE 500
 
-
 int main (void)
 {
     /* Initialises all modules*/

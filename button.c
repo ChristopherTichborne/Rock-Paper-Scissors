@@ -17,7 +17,6 @@ void button_init (void)
     DDRD |= (0 << 7);
 }
 
-
 /* Return non-zero if button pressed*/
 int button_pressed_p (void)
 {

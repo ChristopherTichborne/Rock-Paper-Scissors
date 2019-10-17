@@ -1,7 +1,9 @@
-/* displayResults.c
+/*
+ * displayResults.c
  * Nic Page 41124128, Chris Tichborne 65767344
  * 16 October 2019
- * Module to display characters and results of game*/
+ * Module to display characters and results of game
+ */
 
 #include "../fonts/font5x7_1.h"
 #include "tinygl.h"

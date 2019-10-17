@@ -5,7 +5,6 @@
  * Header file for displayResults.c
 */
 
-
 #ifndef DISPLAYRESULTS_H
 #define DISPLAYRESULTS_H
 

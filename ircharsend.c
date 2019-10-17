@@ -1,5 +1,5 @@
 /* ircharsend.c
- * Nic page, Chris Tichborne
+ * Nic page 41124128, Chris Tichborne 65767344
  * 16 October 2019
  * Module that handles IR communications
 */

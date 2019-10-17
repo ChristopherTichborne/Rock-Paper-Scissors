@@ -1,5 +1,5 @@
 # File:   Makefile
-# Author: Nic Page, Chris Tichborne
+# Author: Nic Page 41124128, Chris Tichborne 65767344
 # Date:   16 October 2019
 # Descr:  Makefile for game.c, which is a Rock Paper Scissors game
 

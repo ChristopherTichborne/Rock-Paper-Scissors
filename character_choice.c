@@ -1,5 +1,5 @@
 /* character_choice.c
- * Nic Page, Chris Tichborne
+ * Nic Page 41124128, Chris Tichborne 65767344
  * 16 October 2019
    Module for selection of rock, paper, or scissors.
    'R' for rock, 'P' for paper, and 'S' for scissors.

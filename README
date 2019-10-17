@@ -1,0 +1,19 @@
+260 Assignment README
+Nic Page 41124128, Chris Tichborne 65767344
+16th October 2019
+
+Game is Rock, Paper, Scissors
+
+Press Nav switch in a direction to move off starting message, and to a waiting screen with a single line.
+
+Pressing nav left selects scissors, nav up for paper, and nav right for rock.
+
+Selections are not locked in until the nav switch is pressed in, and until then choices can be changed between the three options.
+
+The blue LED will light up upon locking in a choice.
+
+Once both players have locked in a choice, the game decides the winner and loser, or draw if both players have selected the same option.
+
+The winning board displays a 'W' for win, and losing board a 'L' for loss.
+
+Pressing R13 button takes you back to idle screen with single line, and waits for another input to start another game.

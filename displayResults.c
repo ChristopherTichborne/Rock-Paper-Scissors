@@ -1,5 +1,5 @@
 /* displayResults.c
- * Nic Page, Chris Tichborne
+ * Nic Page 41124128, Chris Tichborne 65767344
  * 16 October 2019
  * Module to display characters and results of game*/
 

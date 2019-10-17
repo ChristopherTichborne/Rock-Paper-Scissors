@@ -7,6 +7,7 @@
 
 #include "system.h"
 #include "navswitch.h"
+
 char character_choice(char choice)
 {
     if (navswitch_push_event_p(NAVSWITCH_EAST)) {  // East/Right for rock selection

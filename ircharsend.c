@@ -1,5 +1,4 @@
-/*
- * ircharsend.c
+/* ircharsend.c
  * Nic page, Chris Tichborne
  * 16 October 2019
  * Module that handles IR communications

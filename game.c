@@ -1,5 +1,5 @@
 /* PAPER SCISSORS ROCK
- * Nic Page, Chris Tichborne
+ * Nic Page 41124128, Chris Tichborne 65767344
  * 16 October 2019
  * Main game file for game.c
  *

@@ -1,6 +1,6 @@
 /*
  * check_winner.h
- * Nic page, Chris Tichborne
+ * Nic Page 41124128, Chris Tichborne 65767344
  * 16 October 2019
  * Header file for check_winner.c
 */

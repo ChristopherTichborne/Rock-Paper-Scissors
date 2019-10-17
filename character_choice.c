@@ -1,5 +1,4 @@
-/*
- * character_choice.c
+/* character_choice.c
  * Nic Page, Chris Tichborne
  * 16 October 2019
    Module for selection of rock, paper, or scissors.
